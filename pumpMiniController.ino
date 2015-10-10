@@ -27,6 +27,14 @@
 
 /*************CONFIG******************************************************/
 const int PUMP_POWER = 80;          // 0-100 Power percentage
+
+/*
+ * 1  minute  =   60000 miliseconds
+ * 5  minutes =  300000 miliseconds
+ * 15 minutes =  900000 miliseconds
+ * 30 minutes = 1800000 miliseconds
+ * 60 minutes = 3600000 miliseconds
+ */
 const long PUMP_ON_TIME = 120000;     // in milliseconds
 const long PUMP_REPEAT_TIME = 1800000; // in milliseconds
 /*************CONFIG******************************************************/
