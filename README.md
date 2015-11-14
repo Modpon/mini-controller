@@ -22,8 +22,6 @@
 <p>The easiest way to power and control the pump is with an Arduino Nano. Of course other options are plentyfull and out there but the Arduino Nano is cheap, small and easy to program.</p>
 <p>The Arduino runs on 5v, this is enough to power a small pump and water the plants. The power comes from anything that can power a USB device, like a computer, TV or a wall plug.</p>
 <p>Take a look at the schema below and solder the components to a board. Use a prototype board or even some card board to keep everything together. It's a good idea to put everything in a waterproof case, just in case water spills. Modpon has created a small circuit board which is easy to solder and fits nicely in a small case.</p>
-<p>
-
 
 ![Alt text](https://raw.githubusercontent.com/Modpon/mini-controller/master/images/Arduino-nano-mini-pump-schema.png "The arduino nano mini controller schema")
 
