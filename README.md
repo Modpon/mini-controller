@@ -50,7 +50,5 @@
 
 <h2>Build a window sill hydroponics stand</h2>
 <p>The controller you just created is perfect for small setups like the window bottle stand.</p>
-
+<p>The complete build for this is coming soon!</p>
 ![Alt text](https://raw.githubusercontent.com/Modpon/mini-controller/master/images/window-sill-4bottled-plants-sketch.png "the mini controller in a window sill setup")
-
-<h3>The complete build for this is coming soon to Github!</h3>
