@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mini Controller by Modpon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Mini Controller</h1>
+      <h2 class="project-tagline">This is the Mini Modpon controller which runs an Arduino Nano controller</h2>
+      <a href="https://github.com/Modpon/mini-controller" class="btn">View on GitHub</a>
+      <a href="https://github.com/Modpon/mini-controller/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Modpon/mini-controller/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mini-controller" class="anchor" href="#mini-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mini Controller</h1>
+
+<p><img src="https://raw.githubusercontent.com/Modpon/mini-controller/master/images/mini-modpon-controller-v1.jpg" alt="Alt text" title="The first build of the mini controller"></p>
+
+<p>This tiny controller simply turns a 3-5v pump on and off. The duration of the times is set in the Arduino code. By default the pump will turn on every hour for 1 minute. You can modify this if you need to by connecting the controller to your pc.</p>
+
+<h2>
+<a id="what-you-need" class="anchor" href="#what-you-need" aria-hidden="true"><span class="octicon octicon-link"></span></a>What you need</h2>
+
+<ul>
+<li>Arduino Nano</li>
+<li>6v Pump</li>
+<li>USB cable (normal and mini connector)</li>
+<li>PC (Windows, MAC or Linux)</li>
+<li>Soldering (or prototype) board</li>
+<li>10k Resistor</li>
+<li>10uF Condensator</li>
+<li>Transistor BC547 (up to 100mA)</li>
+<li>Block connector (to connect pump to board)</li>
+<li>Few wires</li>
+</ul>
+
+<h2>
+<a id="building-the-hardware-part-of-the-controller" class="anchor" href="#building-the-hardware-part-of-the-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building the hardware part of the controller</h2>
+
+<p>The easiest way to power and control the pump is with an Arduino Nano. Of course other options are plentyfull and out there but the Arduino Nano is cheap, small and easy to program.</p>
+
+<p>The Arduino runs on 5v, this is enough to power a small pump and water the plants. The power comes from anything that can power a USB device, like a computer, TV or a wall plug.</p>
+
+<p>Take a look at the schema below and solder the components to a board. Use a prototype board or even some card board to keep everything together. It's a good idea to put everything in a waterproof case, just in case water spills. Modpon has created a small circuit board which is easy to solder and fits nicely in a small case.</p>
+
+<p><img src="https://raw.githubusercontent.com/Modpon/mini-controller/master/images/Arduino-nano-mini-pump-schema.png" alt="Alt text" title="The arduino nano mini controller schema"></p>
+
+<h2>
+<a id="programming-the-arduino-controller" class="anchor" href="#programming-the-arduino-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programming the Arduino controller</h2>
+
+<p>The Arduino is also very easy to program, just download the free sotware (IDE) on <a title="Download the Arduino IDE" href="http://arduino.org/downloads" target="_blank">Arduino.org and install it.</a></p>
+
+<p>Now let's get started</p>
+
+<ol>
+<li>Plug a USB cable into your PC and the Arduino.</li>
+<li>Start the IDE and check if it connected, go to <strong>Tools</strong> -&gt; <strong>Serial Port</strong> and check if the device is checked. If <strong>Serial Port</strong> is greyed out nthe connection failed, try connecting the USB cable again, another USB port or another cable.</li>
+<li>Select the Arduino your using under <strong>Tools</strong> -&gt; <strong>Board</strong> -&gt; <strong>Arduino Nano w/ATmega328</strong> (or a different one your using)</li>
+<li>Use one of the two controller codes and <strong>copy</strong> the code.
+
+<p><a href="https://github.com/Modpon/mini-controller/blob/master/basicController.ino" target="blank">Basic time delay code.</a> Use this if it's your first time using Arduino code.</p>
+<p><a href="https://github.com/Modpon/mini-controller/blob/master/pumpMiniController.ino" target="blank">Less basic without a delay in the loop.</a> This one is a litte bit more complicated and uses Unsigned long variables instead of a time Delay.</p>
+
+</li>
+<li>Back in your IDE <strong>paste</strong> the code. Make any changes you want, like pin number or timing intervals. Read the comments in the code to see what the conbtroller actually does. <strong>SAVE the sketch</strong> somewhere on your PC.</li>
+<li>F. Now click the <strong>Upload icon</strong> (right arrow), or go to <strong>File</strong> -&gt; <strong>Upload</strong> and check the bottom part of the IDE should now show messages when compiling and uploading the code to the Arduino. The TX and RX LED's (on the Arduino Nano) should flicker and the IDE will notify you when the code is succesfully uploaded.</li>
+</ol>
+
+<h2>
+<a id="final-steps" class="anchor" href="#final-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Steps</h2>
+
+<p>Connect the controller and pump, make sure you have plus (red) and ground (black) wires connected correctly. The USB will provide all the power.</p>
+
+<p>Connect the usb to some sort of power source and the pump will start running!</p>
+
+<h2>
+<a id="build-a-window-sill-hydroponics-stand" class="anchor" href="#build-a-window-sill-hydroponics-stand" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build a window sill hydroponics stand</h2>
+
+<p>The controller you just created is perfect for small setups like the window bottle stand.</p>
+
+<p>The complete build for this is coming soon.</p>
+
+<p><img src="https://raw.githubusercontent.com/Modpon/mini-controller/master/images/window-sill-4bottled-plants-sketch.png" alt="Alt text" title="the mini controller in a window sill setup"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Modpon/mini-controller">Mini Controller</a> is maintained by <a href="https://github.com/Modpon">Modpon</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
